@@ -39,13 +39,13 @@ public class MandelbrotFP32 extends Kernel implements Mandelbrot {
 
     public RenderedImage render() {
         execute(iw * ih);
+        System.out.println("Device Type: " + getTargetDevice().getType());
+        System.out.println("Converson Time: " + getConversionTime());
+        System.out.println("Execution Time: " + getAccumulatedExecutionTime());
         final BufferedImage image = new BufferedImage(iw, ih, BufferedImage.TYPE_INT_RGB);
         IntStream.range(0, iw).parallel().forEach(x -> IntStream.range(0, ih).forEach(y ->
                 image.setRGB(x, y, data[x + (y * iw)])
         ));
-        System.out.println("Device Type: " + getTargetDevice().getType());
-        System.out.println("Converson Time: " + getConversionTime());
-        System.out.println("Execution Time: " + getAccumulatedExecutionTime());
         return image;
     }
 

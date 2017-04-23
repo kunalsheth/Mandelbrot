@@ -1,5 +1,4 @@
 import com.aparapi.Kernel;
-import com.aparapi.device.Device;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
@@ -13,7 +12,7 @@ public class MandelbrotFP32 extends Kernel implements Mandelbrot {
     public final float gw, gh;
     public final int iw, ih;
 
-    final int[] data;
+    protected final int[] data;
 
     public MandelbrotFP32(
             final int maxIterations,

@@ -1,5 +1,3 @@
-import com.aparapi.device.Device;
-
 import javax.imageio.ImageIO;
 import java.awt.image.RenderedImage;
 import java.io.File;
@@ -12,7 +10,7 @@ public class GenerateFrame {
             System.err.println("[left x coordinate of graph][top y coordinate of graph][graph width][graph height][image width][image height]");
             System.err.println();
             System.err.println("Some good parameters to start of with are:");
-            System.err.println("-2 -1.25 3.5 2.5 2560 1828 mandelbrot.png");
+            System.err.println("-2 -1.25 3.5 2.5 5120 3656 mandelbrot.png");
             System.exit(1);
         }
 

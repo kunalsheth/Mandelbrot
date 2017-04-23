@@ -1,14 +1,9 @@
 import com.aparapi.Kernel;
-import com.aparapi.Range;
-import com.aparapi.device.Device;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.util.stream.IntStream;
 
-/**
- * Created by the-magical-llamicorn on 4/22/17.
- */
 public class MandelbrotFP64 extends Kernel implements Mandelbrot {
 
     public final int maxIterations;
@@ -44,7 +39,7 @@ public class MandelbrotFP64 extends Kernel implements Mandelbrot {
     }
 
     public RenderedImage render() {
-        execute(iw*ih);
+        execute(iw * ih);
         System.out.println("Device Type: " + getTargetDevice().getType());
         System.out.println("Converson Time: " + getConversionTime());
         System.out.println("Execution Time: " + getAccumulatedExecutionTime());

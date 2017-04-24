@@ -16,8 +16,20 @@ public class Zoom {
         frame.setBounds(GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds());
         final double aspectRatio = frame.getWidth() / (double) frame.getHeight();
 
-        final int maxIterations = Integer.parseInt(args[0]);
-        final double px = Double.parseDouble(args[1]), py = Double.parseDouble(args[2]);
+        int maxIterations;
+        double px;
+        double py;
+        try {
+            maxIterations = Integer.parseInt(args[0]);
+            px = Double.parseDouble(args[1]);
+            py = Double.parseDouble(args[2]);
+        } catch (final NumberFormatException | ArrayIndexOutOfBoundsException e) {
+            System.err.println("[max iterations][zoom coordinate real][zoom coordinate imaginary]");
+            System.err.println("Using Default Values");
+            maxIterations = 100;
+            px = -0.636754346582389978;
+            py = 0.685031297083677301;
+        }
 
         double gw = 3;
         final Mandelbrot mandelbrot = new MandelbrotFP32(maxIterations, 2, 0, 0, 0, 0, frame.getWidth(), frame.getHeight());

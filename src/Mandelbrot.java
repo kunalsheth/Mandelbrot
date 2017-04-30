@@ -86,7 +86,6 @@ public abstract class Mandelbrot extends Kernel {
                 b = (int) (q * 255.0f + 0.5f);
             }
         }
-        //return 0xff000000 | (r << 16) | (g << 8) | b;
         return 0xff000000 | (r << 16) | (g << 8) | b;
     }
 }

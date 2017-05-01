@@ -4,6 +4,9 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.awt.image.RenderedImage;
 
+/**
+ * Created by the-magical-llamicorn on 4/19/17.
+ */
 public abstract class Mandelbrot extends Kernel {
 
     protected final BufferedImage image;

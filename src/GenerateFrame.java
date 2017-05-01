@@ -5,6 +5,9 @@ import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Created by the-magical-llamicorn on 4/22/17.
+ */
 public class GenerateFrame {
 
     public static void main(final String[] args) {

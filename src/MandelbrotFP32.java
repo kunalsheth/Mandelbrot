@@ -1,3 +1,6 @@
+/**
+ * Created by the-magical-llamicorn on 4/20/17.
+ */
 public class MandelbrotFP32 extends Mandelbrot {
 
     protected float glx, gty;
